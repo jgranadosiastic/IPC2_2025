@@ -22,8 +22,8 @@ public class DBConnection {
     private static final String IP = "localhost";
     private static final int PUERTO = 3306;
     private static final String SCHEMA = "hospidb";
-    private static final String USER_NAME = "admindba";
-    private static final String PASSWORD = "12345";
+    public static final String USER_NAME = "admindba";
+    public static final String PASSWORD = "12345";
 
     private static final String INSERT_COLEGIADO = "INSERT INTO colegiado "
             + "(numero_colegiado, fecha_colegiado, activo) "
@@ -37,8 +37,11 @@ public class DBConnection {
             + "(codigo, fecha_hora, dpi, celular) "
             + "values ('%s', '%s', '%s', '%s')";
 
-    private static final String URL = "jdbc:mysql://"
+    public static final String URL = "jdbc:mysql://"
             + IP + ":" + PUERTO + "/" + SCHEMA;
+    
+    public static final String URL_FATAL = "jdbc:mysql://"
+            + IP + ":" + PUERTO + "/" + SCHEMA + "?allowMultiQueries=true";
 
     private Connection connection;
 
