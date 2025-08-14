@@ -15,3 +15,5 @@ buildNumber.properties
 .project
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
+/web-static/nbproject/private/
+/HTML5Application/nbproject/private/
